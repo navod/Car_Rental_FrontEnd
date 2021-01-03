@@ -1,0 +1,174 @@
+
+.car-add{
+    position: absolute;
+    right: 0;
+    width: 593px;
+    top: 116px;
+}
+.profile-pic {
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+}
+
+.file-upload {
+    display: none;
+}
+.circle {
+    border-radius: 1000px !important;
+    overflow: hidden;
+    width: 128px;
+    height: 128px;
+    border: 8px solid rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 72px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.p-image {
+    position: absolute;
+    top: 167px;
+    right: 30px;
+    color: #666666;
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.p-image:hover {
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+}
+.upload-button {
+    font-size: 1.2em;
+}
+
+.upload-button:hover {
+    transition: all .3s cubic-bezier(.175, .885, .32, 1.275);
+    color: #999;
+}
+.adding-group-of-img{
+    width: 100px;
+    height: 100px;
+    border:1px solid;
+    position: relative;
+    background: black;
+}
+/*preview images*/
+.image-layout{
+    /*height: 350px;*/
+
+}
+.wrapper{
+    position: relative;
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    background: #fff;
+    border: 2px dashed #c2cdda;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.wrapper.active{
+    border: none;
+}
+.wrapper .image{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.wrapper img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper .icon{
+    font-size: 100px;
+    color: #9658fe;
+}
+.wrapper .text{
+    font-size: 20px;
+    font-weight: 500;
+    color: #5B5B7B;
+}
+.wrapper .cancel-btn i{
+    position: absolute;
+    font-size: 20px;
+    right: 15px;
+    top: 15px;
+    color: #9658fe;
+    cursor: pointer;
+    /*display: none;*/
+}
+.wrapper.active:hover #cancel-btn i{
+    display: block;
+}
+.wrapper #cancel-btn i:hover{
+    color: #e74c3c;
+}
+.wrapper .file-name{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 18px;
+    color: #fff;
+    display: none;
+    background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+}
+.wrapper.active:hover .file-name{
+    display: block;
+}
+.image-layout .custom-btn{
+    display: block;
+    height: 39px;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    background: linear-gradient(135deg,#3a8ffe 0%,#9658fe 100%);
+}
+
+span{
+    color: red;
+    font-size: 24px;
+}
+
+@media all and (min-width: 1440px){
+    .form-alignment{
+        position: relative;
+        left: -143px;
+
+    }
+}
+@media all and (max-width: 320px){
+    .car-add{
+        display: none;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 425px){
+    .car-add{
+        display: none;
+    }
+}
+@media all and (min-width: 425px) and (max-width: 768px){
+    .car-add{
+        display: none;
+    }
+}
+@media all and (min-width: 768px) and (max-width: 1024px){
+    .car-add{
+        display: none;
+    }
+}
+
+
+

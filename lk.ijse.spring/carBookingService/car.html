@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>car</title>
+    <link href="../assests/boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <meta content="width = device-width initial-scale=1" name="viewport">
+    <link href="../assests/boostrap/css/normalise.css" rel="stylesheet">
+    <link href="car.css" rel="stylesheet">
+    <link href="../carService/carAddingService/carAdding.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assests/font-awesome/css/all.min.css">
+    <link rel="stylesheet" href="../service/dashboard/dashboard2.css">
+</head>
+<body>
+
+<form action="../CustomerServie/customerManage/updateCustomer.html">
+<section class="container-fluid mt-3">
+    <p>Bank : BOC</p>
+    <p>Bank : 1456895412365789852</p>
+    <p>Please </p>
+    <div class="row">
+        <div class="ml-xl-3 mr-xl-4 col-sm-12 col-12 col-md-12 col-lg-5 col-xl-5">
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-6 col-xl-6 sm-12">
+                    <label for="carType">Car type<span>*</span></label>
+                    <select class="form-control" id="carType" type="text">
+                        <option>Select Transmission</option>
+                        <option>General</option>
+                        <option>Premium</option>
+                        <option>Luxury</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-xl-6 sm-12">
+                    <label for="comboCarModel">Car Model<span>*</span></label>
+                    <select class="form-control" id="comboCarModel" type="text">
+                        <option>Select Car Model</option>
+                    </select>
+                </div>
+                <div class="col-lg-6 col-xl-6 sm-12 mt-2">
+                    <label for="carBookId">Car ID</label>
+                    <input class="form-control" id="carBookId" placeholder="put your car id" type="r">
+                </div>
+                <div class="col-lg-4 col-xl-4 sm-12 mt-2 bg-light ml-xl-3">
+                    <p>Are you want driver ?</p>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="yes">
+                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="No">
+                        <label class="form-check-label" for="inlineRadio2">No</label>
+                    </div>
+                </div>
+
+                <div id="driverWindow" class="card mb-3 p-2 ml-xl-3 mt-3" style="max-width: 540px;">
+
+                </div>
+            </div>
+            <hr>
+            <h4>Pick up details </h4>
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-6 col-xl-6 sm-12">
+                    <label for="PickupDate">Pick up Date</label>
+                    <input class="form-control" id="PickupDate" placeholder="DD/MM/YYYY" type="date">
+                </div>
+                <div class="col-lg-6 col-xl-6 sm-12">
+                    <label for="returnDate">Return Date</label>
+                    <input class="form-control" id="returnDate" placeholder="DD/MM/YYYY" type="date">
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-12 col-xl-12 sm-12">
+
+                    <label for="reason">Reason</label>
+                    <textarea class="form-control" id="reason" placeholder="Put your reason"></textarea>
+                </div>
+            </div>
+
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-6 col-xl-6 sm-12">
+                    <label for="damagedFee">Damage Fee</label>
+                    <input class="form-control" id="damagedFee" placeholder="" type="number">
+                </div>
+                <div class="col-lg-6 col-xl-6 sm-12">
+                    <div class="image-layout">
+                        <div class="wrapper" id="wrapper1">
+                            <div class="image">
+                                <img alt="" id="add-image" src="">
+                            </div>
+                            <div class="content">
+                                <div class="icon">
+                                    <i class="fas fa-cloud-upload-alt"></i></div>
+                                <div class="text">
+                                    No file chosen, yet!
+                                </div>
+                            </div>
+                            <div class="cancel-btn" id="cancel-btn">
+                                <i class="fas fa-times"></i></div>
+                            <div class="file-name" id="file-name1">
+                                File name here
+                            </div>
+                        </div>
+                        <button class="custom-btn mt-3" id="custom-btn" onclick="defaultBtnActive()">Submit bank receipt
+                        </button>
+                        <input hidden id="default-btn" type="file">
+                    </div>
+                </div>
+            </div>
+
+            <input class="btn-success btn-lg btn col-12 mt-3" type="button" id="submitRequirement" value="Submit your Car">
+            <br>
+            <br>
+            <br>
+        </div>
+        <div class="col-sm-12 col-12 col-md-12 col-lg-6 col-xl-6" id="carView">
+
+
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
+        <table class="table table-bordered table-hover table-responsive">
+            <thead class="col-12 bg-dark text-white">
+            <th class="col-xl-6">CarType</th>
+            <th class="">Damage Fee</th>
+            </thead>
+            <tbody>
+            <tr>
+                <td>General</td>
+                <td>RS 10000.00</td>
+            </tr>
+            <tr>
+                <td>Premier</td>
+                <td>RS 15000.00</td>
+            </tr>
+            <tr>
+                <td>Luxury</td>
+                <td>RS 20000.00</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+</form>
+<section class="parent-footer">
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3>Easy Car <span>Rental</span></h3>
+
+            <p class="footer-links">
+                <a class="link-1" href="#">Home</a>
+
+                <a href="#">Blog</a>
+
+                <a href="#">Pricing</a>
+
+                <a href="#">About</a>
+
+                <a href="#">Faq</a>
+
+                <a href="#">Contact</a>
+            </p>
+
+            <p class="footer-company-name">Company Name © 2015</p>
+        </div>
+
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span> No. 200, </span>Galle Road, Panadura</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1.555.555.5555</p>
+            </div>
+
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">easycar@gmail.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                Easy car rental private limited is a car rental service with 5 years of history. This company has about
+                50 cars and 40 drivers working for them in regular shifts.
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+
+            </div>
+
+        </div>
+
+    </footer>
+</section>
+
+<script src="../assests/boostrap/js/jquery-3.5.1.min.js"></script>
+<script src="../assests/boostrap/js/bootstrap.bundle.min.js"></script>
+<script src="CarBookingController.js"></script>
+</body>
+</html>

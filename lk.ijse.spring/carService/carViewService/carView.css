@@ -1,0 +1,35 @@
+.header{
+    background: #005cbf;
+    width: 100vw;
+    height: 66px;
+    position: relative;
+}
+.icons-panel{
+    width: 50px;
+    position: absolute;
+    right: 24px;
+    height: 47px;
+    top: 0;
+}
+header>div>p{
+    display: inline-block;
+    margin: 7px;
+    font-size: 35px;
+}
+
+@media all and (max-width: 320px){
+    .header{
+        height: 99px;
+    }
+    .icons-panel{
+        right: -26px;
+        top: 15px;
+    }
+}
+@media all and (min-width: 375px) and (max-width: 450px){
+
+    .icons-panel{
+        right: -40px;
+        top: -1px;
+    }
+}
